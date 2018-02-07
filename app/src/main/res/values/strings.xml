@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OYO</string>
+
+	<string name="checkout">11:00 AM -></string>
+    <string name="checkin">-> 12:00 PM</string>
+    <string name="city">Hyderabad</string>
+    <string name="forchildren">Travelling with children?(0-5 years)</string>
+    </resources>

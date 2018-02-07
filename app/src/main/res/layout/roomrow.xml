@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="7dp"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="ROOM 1"
+            android:padding="10dp"
+            android:gravity="center"/>
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:id="@+id/close"
+            android:background="@drawable/ripple"
+            android:textColor="#E50000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingBottom="10dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:drawableLeft="@drawable/adult"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:drawablePadding="5dp"
+                android:layout_weight="3"
+                android:text="Adults"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="6.6"
+                android:gravity="center"
+                android:weightSum="6"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="1"
+                    android:padding="10dp"
+                    android:id="@+id/adult1"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:background="#E50000"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:padding="10dp"
+                    android:layout_weight="2"
+                    android:id="@+id/adult2"
+                    android:text="2"
+                    android:background="@drawable/ripple"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:padding="10dp"
+                    android:layout_weight="2"
+                    android:text="3"
+                    android:background="@drawable/ripple"
+                    android:id="@+id/adult3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#D7D1C9"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="10"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:textColor="#000000"
+                android:text="@string/forchildren"
+                android:layout_height="match_parent" />
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/ticbox"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/childlayout"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15sp"
+            android:gravity="center_vertical"
+            android:weightSum="10"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:textColor="#000000"
+                android:text="Children"
+                android:drawableLeft="@drawable/child"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textStyle="bold"
+
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:id="@+id/childdecrease"
+                    android:padding="10dp"
+                    android:textColor="#E50000"
+                    android:gravity="center"
+                    android:background="@drawable/ripple"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="1"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:id="@+id/childcount"
+                    android:gravity="center"
+                    android:background="#FFFFFF"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:id="@+id/childincrease"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                    android:textColor="#E50000"
+                    android:gravity="center"
+                    android:background="@drawable/ripple"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
