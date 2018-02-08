@@ -5,4 +5,21 @@
     <string name="checkin">-> 12:00 PM</string>
     <string name="city">Hyderabad</string>
     <string name="forchildren">Travelling with children?(0-5 years)</string>
+    <string name="hot">Hurry up ! Already 4 people booked this..</string>
+    <string name="oyocaptain">OYO Captain Mohd Qiyamuddin says,</string>
+    <string name="says">Call me for any local assistance or support required during your stay</string>
+    <string name="roomandpersons">Room and Persons</string>
+    <string name="anountpayable">Amount Payable</string>
+    <string name="tariffhead">Total Tariff</string>
+    <string name="tarrifdesc">Tariff Description</string>
+    <string name="pricedrop">Price Dropped (33%Off)</string>
+    <string name="inr">INR</string>
+    <string name="coupon">Apply Coupon</string>
+    <string name="oyomoney">Use OYO Money</string>
+    <string name="bookingfor">Booking for</string>
+    <string name="user">User</string>
+    <string name="search">Search hotels without any restriction</string>
+    <string name="proceeding">By proceeding, you agree to our Guest Policies</string>
+    <string name="thankyou">This hotel is served under the trade name of Dawood Saleem as per quality standards of OYO</string>
+    <string name="youmaylike">Similar OYOs you may like</string>
     </resources>

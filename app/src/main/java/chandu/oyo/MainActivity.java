@@ -93,7 +93,7 @@ RecyclerView recyclerView;
             ,noofratings[i],ratingdigit[i],hotelname[i],hoteladdr[i],commentrating[i]));
         }
 
-        adapter = new RecyclerAdapter(arrayList,imageView,nooffavs);
+        adapter = new RecyclerAdapter(arrayList,imageView,nooffavs,MainActivity.this);
         recyclerView.setAdapter(adapter);
         checkoutLayout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,7 @@
 package chandu.oyo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,11 +25,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     int prevPosition = 0;
     ImageView imageView;
     TextView textView;
-    public  RecyclerAdapter(ArrayList<Room> arrayList, ImageView imageView,TextView textView){
+    Context context;
+    public  RecyclerAdapter(ArrayList<Room> arrayList, ImageView imageView,TextView textView,Context context){
 
         this.arrayList=arrayList;
         this.imageView =imageView;
         this.textView = textView;
+        this.context = context;
     }
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,6 +52,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.rating_digit.setText(String.valueOf(arrayList.get(position).getRating_digit()));
         holder.strike_price.setText("INR "+String.valueOf(arrayList.get(position).getStrike_price()));
 
+        holder.room_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,RoomActivity.class);
+                context.startActivity(i);
+            }
+        });
         holder.fav.setOnLikeListener(new OnLikeListener() {
             @Override
             public void liked(LikeButton likeButton) {

@@ -20,6 +20,9 @@
         <activity android:name=".FragmentActivity">
 
         </activity>
+        <activity android:name=".RoomActivity">
+
+        </activity>
     </application>
 
 </manifest>
