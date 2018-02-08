@@ -23,6 +23,9 @@
         <activity android:name=".RoomActivity">
 
         </activity>
+        <activity android:name=".ImagesViewPager">
+
+        </activity>
     </application>
 
 </manifest>

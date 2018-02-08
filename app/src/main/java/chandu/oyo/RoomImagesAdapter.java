@@ -1,5 +1,7 @@
 package chandu.oyo;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +16,13 @@ import java.util.ArrayList;
 
 public class RoomImagesAdapter extends RecyclerView.Adapter<RoomImagesAdapter.MyViewHolder> {
     ArrayList<ImageInfo> arrayList = new ArrayList<>();
-    public RoomImagesAdapter(ArrayList<ImageInfo> arrayList) {
+    Context context;
+
+
+    public RoomImagesAdapter(ArrayList<ImageInfo> arrayList, Context context) {
         this.arrayList = arrayList;
+        this.context = context;
+
     }
 
     @Override
@@ -27,6 +34,13 @@ public class RoomImagesAdapter extends RecyclerView.Adapter<RoomImagesAdapter.My
     @Override
     public void onBindViewHolder(RoomImagesAdapter.MyViewHolder holder, int position) {
         holder.imageView.setImageResource(arrayList.get(position).getImg_id());
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,ImagesViewPager.class);
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override

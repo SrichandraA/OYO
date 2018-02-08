@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,7 +59,7 @@ public class RoomActivity extends AppCompatActivity {
         for(int i = 0; i < img_id.length; i++ ){
             arrayList.add(new ImageInfo(img_id[i]));
         }
-        adapter = new RoomImagesAdapter(arrayList);
+        adapter = new RoomImagesAdapter(arrayList,RoomActivity.this);
         recyclerView.setAdapter(adapter);
         bottomsheeticon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,9 +79,8 @@ public class RoomActivity extends AppCompatActivity {
         BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from((View) parentView.getParent());
 
         bottomSheetBehavior.setPeekHeight(
-                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,400,getResources().getDisplayMetrics())
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,370,getResources().getDisplayMetrics())
         );
-
         RecyclerView recyclerView = (RecyclerView)parentView.findViewById(R.id.facilitiesrecyclerview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(RoomActivity.this);
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -92,10 +92,8 @@ public class RoomActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         RecyclerView similarRoomsRecyclerView = (RecyclerView)parentView.findViewById(R.id.similarroomsrecyclerview);
-        LinearLayoutManager similarRoomsLinearLayoutManager = new LinearLayoutManager(RoomActivity.this);
-        similarRoomsLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        StaggeredGridLayoutManager similarRoomsLinearLayoutManager = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL);
         similarRoomsRecyclerView.setLayoutManager(similarRoomsLinearLayoutManager);
-
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         ViewGroup vg = (ViewGroup) inflater.inflate(R.layout.activity_main, null);
         TextView textView = (TextView)vg.findViewById(R.id.nooffavs);

@@ -19,7 +19,6 @@
             android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             app:statusBarScrim="@android:color/transparent"
 
             app:layout_scrollFlags="scroll|enterAlways">
@@ -29,7 +28,6 @@
                 android:layout_width="wrap_content"
 
                 android:layout_height="match_parent"
-                android:background="#FFFFFF"
                 android:minHeight="?attr/actionBarSize"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
