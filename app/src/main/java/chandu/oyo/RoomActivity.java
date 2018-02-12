@@ -25,19 +25,19 @@ import java.util.ArrayList;
 
 public class RoomActivity extends AppCompatActivity {
 
-    int[] img_id = {R.drawable.room1,R.drawable.room2,R.drawable.room3,R.drawable.room4,R.drawable.room5,R.drawable.room6,R.drawable.room7,R.drawable.room8};
     int[] facility_img_id = {R.drawable.facility1,R.drawable.facility2,R.drawable.facility3,R.drawable.facility4,R.drawable.facility5,R.drawable.facility1,R.drawable.facility2,R.drawable.facility3,R.drawable.facility4,R.drawable.facility5};
     String[] facility_name = {"Beds","Wi-fi","Acodomocoes","Sitting","Swimming","Beds","Wi-fi","Acodomocoes","Sitting","Swimming"};
-    int[] strikeprice = {2000,2100,2200,2300,2400,2500,2600,2700};
-    int[] originalprice = {1000,1100,1200,1300,1400,1500,1600,1700};
-    int[] offer = {10,10,10,10,10,10,10,10};
-    int[] noofratings = {100,200,300,400,500,600,700,800};
-    double[] ratingdigit = {2.2,3.2,4.5,5.0,3.2,3.5,4.4,3.1};
+    int[] img_id = {R.drawable.room1,R.drawable.room2,R.drawable.room3,R.drawable.room4,R.drawable.room5,R.drawable.room6,R.drawable.room7,R.drawable.room8,R.drawable.room1,R.drawable.room2,R.drawable.room3,R.drawable.room4,R.drawable.room5,R.drawable.room6,R.drawable.room7,R.drawable.room8};
+    int[] strikeprice = {2000,2100,2200,2300,2400,2500,2600,2700,2000,2100,2200,2300,2400,2500,2600,2700};
+    int[] originalprice = {1000,1100,1200,1300,1400,1500,1600,1700,1000,1100,1200,1300,1400,1500,1600,1700};
+    int[] offer = {10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10};
+    int[] noofratings = {100,200,300,400,500,600,700,800,100,200,300,400,500,600,700,800};
+    double[] ratingdigit = {2.2,3.2,4.5,5.0,3.2,3.5,4.4,3.1,2.2,3.2,4.5,5.0,3.2,3.5,4.4,3.1};
     String[] hotelname = {"Paradise","Ramchandra","Hitex","Radisson","Taj Deccan"
+            ,"Sheraton Hyderabad","ITC Kakatiya","Taj Banjara","Paradise","Ramchandra","Hitex","Radisson","Taj Deccan"
             ,"Sheraton Hyderabad","ITC Kakatiya","Taj Banjara"};
-    String[] hoteladdr = {"Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad"};
-    String[] commentrating = {"Good","Very Good","Good","Very Good","Good","Very Good","Good","Very Good"};
-
+    String[] hoteladdr = {"Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad","Hyderabad"};
+    String[] commentrating = {"Good","Very Good","Good","Very Good","Good","Very Good","Good","Very Good","Good","Very Good","Good","Very Good","Good","Very Good","Good","Very Good"};
 
     RecyclerView recyclerView;
     ArrayList<ImageInfo> arrayList = new ArrayList<>();
@@ -98,7 +98,7 @@ public class RoomActivity extends AppCompatActivity {
         ViewGroup vg = (ViewGroup) inflater.inflate(R.layout.activity_main, null);
         TextView textView = (TextView)vg.findViewById(R.id.nooffavs);
         ImageView imageView = (ImageView) vg.findViewById(R.id.countfav);
-        for(int i = 0 ; i < 8 ; i ++){
+        for(int i = 0 ; i < 16 ; i ++){
 
             roomArrayList.add(new Room(img_id[i],strikeprice[i],originalprice[i],offer[i]
                     ,noofratings[i],ratingdigit[i],hotelname[i],hoteladdr[i],commentrating[i]));

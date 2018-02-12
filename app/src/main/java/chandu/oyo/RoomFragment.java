@@ -91,6 +91,7 @@ public class RoomFragment extends Fragment {
                 intent.putExtra("checkin",((FragmentActivity)getActivity()).getCheckin());
                 intent.putExtra("checkout",((FragmentActivity)getActivity()).getCheckout());
                 intent.putExtra("rooms",rooms);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

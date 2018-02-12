@@ -34,36 +34,32 @@
                 android:layout_margin="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
-                android:orientation="vertical"
-                android:weightSum="2"
+
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:background="@drawable/blackfade">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/strikeprice"
                     android:layout_weight="1"
                     android:textColor="#FFFFFF"
                     android:text="Strike Price"
                     />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
-                    android:layout_weight="1"
-                    >
+
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="match_parent"
                         android:textColor="#FFFFFF"
                         android:id="@+id/originalprice"
+                        android:gravity="center"
+                        android:layout_below="@id/strikeprice"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="Price"
@@ -73,14 +69,15 @@
                         android:layout_height="match_parent"
                         android:textStyle="bold"
                         android:gravity="center"
+                        android:layout_below="@id/strikeprice"
+                        android:layout_toRightOf="@id/originalprice"
                         android:id="@+id/offer"
                         android:text="Offer"
                         android:textColor="#FFB804"
                         android:background="@drawable/blackrectangle"/>
-                </LinearLayout>
 
 
-            </LinearLayout>
+            </RelativeLayout>
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"

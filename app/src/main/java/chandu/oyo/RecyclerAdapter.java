@@ -2,7 +2,12 @@ package chandu.oyo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +18,7 @@ import android.widget.TextView;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -42,7 +48,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-        holder.room_photo.setBackgroundResource(arrayList.get(position).getImg_id());
+//        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), arrayList.get(position).getImg_id());
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//
+//        int nh = (int) ( bitmap.getHeight() * (200.0 / bitmap.getWidth()) );
+//        Bitmap scaled = Bitmap.createScaledBitmap(bitmap, 200, nh, true);
+//        scaled.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//        byte[] imageBytes = baos.toByteArray();
+//        String  encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+//        byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
+//        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+//        Drawable drawable = new BitmapDrawable(decodedByte);
+//
+//        holder.room_photo.setBackground(drawable);
+       holder.room_photo.setBackgroundResource(arrayList.get(position).getImg_id());
         holder.rating_comment.setText(arrayList.get(position).getRating_comment());
         holder.hotel_addr.setText(arrayList.get(position).getHotel_addr());
         holder.hotel_name.setText(arrayList.get(position).getHotel_name());
@@ -51,7 +70,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.original_price.setText("INR "+String.valueOf(arrayList.get(position).getOriginal_price()));
         holder.rating_digit.setText(String.valueOf(arrayList.get(position).getRating_digit()));
         holder.strike_price.setText("INR "+String.valueOf(arrayList.get(position).getStrike_price()));
-
         holder.room_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

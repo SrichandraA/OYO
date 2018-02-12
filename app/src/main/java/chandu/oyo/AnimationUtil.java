@@ -13,8 +13,8 @@ public class AnimationUtil {
     public static void animate(RecyclerView.ViewHolder holder, boolean goesdown){
         AnimatorSet animatorSet = new AnimatorSet();
 
-        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(holder.itemView,"translationY",goesdown == true ? 200 : -200,0);
-        objectAnimator.setDuration(1000);
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(holder.itemView,"translationY",goesdown == true ? 200 : 200,0);
+        objectAnimator.setDuration(500);
 
         animatorSet.playTogether(objectAnimator);
         animatorSet.start();

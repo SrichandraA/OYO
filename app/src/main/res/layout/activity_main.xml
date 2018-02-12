@@ -3,12 +3,117 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
+    android:background="#F2F2F2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="false"
 
 
     >
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/recyclerview"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/person"
+        android:id="@+id/fab"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="110dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_behavior="chandu.oyo.ScrollFABBehaviour"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_height="100dp"
+        android:weightSum="2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="10.02"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="sort"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#696560"
+                android:drawableLeft="@drawable/sort"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                android:textSize="15sp"
+                android:layout_weight="4"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.01"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#D7D1C9"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="filter"
+                android:paddingLeft="20dp"
+
+                android:drawableLeft="@drawable/filter"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#696560"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:layout_weight="4"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.01"
+                android:layout_marginBottom="8dp"
+                android:background="#D7D1C9"/>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/countfav"
+                    android:src="@drawable/heart"
+                    android:layout_centerInParent="true"
+                    android:padding="5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="18dp"
+                    android:text="0"
+                    android:textSize="12dp"
+                    android:id="@+id/nooffavs"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="33dp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"/>
+    </LinearLayout>
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:background="#FFFFFF"
@@ -181,108 +286,6 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/recyclerview"
-        >
 
-    </android.support.v7.widget.RecyclerView>
 
-<android.support.design.widget.FloatingActionButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-android:src="@drawable/person"
-    android:layout_gravity="end|bottom"
-    android:layout_marginBottom="110dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp"
-    app:layout_behavior="chandu.oyo.ScrollFABBehaviour"/>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:background="#FFFFFF"
-    android:layout_gravity="bottom"
-    android:orientation="vertical"
-    android:layout_height="100dp"
-    android:weightSum="2">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:orientation="horizontal"
-    android:weightSum="10.02"
-    android:layout_weight="1">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="sort"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textColor="#696560"
-        android:drawableLeft="@drawable/sort"
-        android:paddingLeft="20dp"
-        android:gravity="center_vertical"
-        android:drawablePadding="10dp"
-        android:textSize="15sp"
-        android:layout_weight="4"/>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0.01"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#D7D1C9"/>
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:text="filter"
-        android:paddingLeft="20dp"
-
-        android:drawableLeft="@drawable/filter"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textColor="#696560"
-        android:drawablePadding="10dp"
-        android:gravity="center_vertical"
-        android:textSize="15sp"
-        android:layout_weight="4"/>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_weight="0.01"
-        android:layout_marginBottom="8dp"
-        android:background="#D7D1C9"/>
-    <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_weight="2"
-        android:layout_height="match_parent">
-        <ImageView
-            android:layout_width="match_parent"
-            android:id="@+id/countfav"
-            android:src="@drawable/heart"
-            android:layout_centerInParent="true"
-            android:padding="5dp"
-            android:layout_height="match_parent" />
-        <TextView
-            android:layout_width="15dp"
-            android:layout_height="18dp"
-            android:text="0"
-            android:textSize="12dp"
-            android:id="@+id/nooffavs"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-android:layout_centerVertical="true"
-            android:layout_marginLeft="33dp"
-            />
-    </RelativeLayout>
-
-</LinearLayout>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#000000"/>
-</LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
